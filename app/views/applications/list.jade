@@ -1,0 +1,9 @@
+extends ../layouts/default
+
+block main
+  h1 Applications
+
+block content
+  each application in applications
+    .article
+      a.title(href='/applications/'+application._id, title=application.name) #{application.name}

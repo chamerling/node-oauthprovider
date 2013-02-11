@@ -1,0 +1,21 @@
+extends ../layouts/default
+
+block main
+  h1= application.name
+
+block content
+  .row
+    .span12
+      .well
+        p.aplication
+          b Created At:&nbsp; 
+          =application.createdAt
+        
+        p.client
+          b Client ID:&nbsp;
+          =application.clientID
+        
+        p.secret
+          b Client Secret: &nbsp;
+          =application.clientSecret
+

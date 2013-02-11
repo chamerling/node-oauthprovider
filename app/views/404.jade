@@ -1,0 +1,12 @@
+extends layouts/default
+
+block main
+  h1 404: Oops something went wrong
+  br
+
+block content
+  #error-message-box
+    #error-stack-trace
+      pre
+        code!= url + ' is not a a valid URL...'
+

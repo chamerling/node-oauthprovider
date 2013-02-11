@@ -1,0 +1,35 @@
+{
+  "name": "node-oauth2provider",
+  "version": "0.0.1",
+  "description": "OAuth2 Provider",
+  "author": "Christophe Hamerling <christophe.hamerling@gmail.com>",
+  "homepage": "http://github.com/chamerling/node-oauth2provider",
+  "keywords": [
+    "node", "oauth", "mongodb"
+  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://mths.be/mit"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/chamerling/node-oauth2provider.git"
+  },
+  
+  "dependencies": {
+    "express": "latest",
+    "oauth2orize": "0.x.x",
+    "passport": "~0.1.12",
+    "passport-local": "0.1.x",
+    "passport-http": "0.2.x",
+    "passport-http-bearer": "0.2.x",
+    "passport-oauth2-client-password": "0.1.x",
+    "connect-ensure-login": "0.1.x",
+    "mongoose":"latest",
+    "mongoose-lifecycle":"latest",
+    "connect-mongo":"latest",
+    "connect-flash":"latest",
+    "async":"latest",
+    "jade": "latest"
+  }
+}

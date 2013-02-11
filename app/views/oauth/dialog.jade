@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block content
+
+  p
+    b
+      =oauthclient.name
+      &nbsp;is requesting access to your account
+
+  form.login.form-horizontal(action='/dialog/authorize/decision', method='post')
+    input#transaction(type='hidden', name="transaction_id", value=transactionID)
+
+    .form-actions
+      button.btn.btn-primary.btn-large(type='submit') Allow
+      &nbsp;
+      a.btn.btn-large.show-signup(href="/") Deny

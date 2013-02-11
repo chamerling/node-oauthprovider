@@ -1,0 +1,20 @@
+extends app
+
+block app
+
+  form.signup.form-horizontal(action="/applications/create", method="post")
+    .control-group
+      label.control-label(for='name') Application name
+      .controls
+        input#name(type='text', name="name", placeholder='Application name', value=application.name)
+
+    .control-group
+      label.control-label(for='description') Description
+      .controls
+        input#description(type='text', name="description", placeholder='Description', value=application.description)
+
+    .form-actions
+      button.btn.btn-primary.btn-large(type='submit') Create
+      &nbsp;
+      a.btn.btn-large(href="/applications") Cancel
+

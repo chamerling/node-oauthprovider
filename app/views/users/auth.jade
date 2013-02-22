@@ -1,10 +1,11 @@
 extends ../layouts/default
 
 block main
-  h1= title
 
 block content
   .row
+    .span3
+      &nbsp;
     .span6
       if (typeof errors !== 'undefined')
         .fade.in.alert.alert-block.alert-error
@@ -14,3 +15,6 @@ block content
               li= error.type
 
       block auth
+      
+    .span3
+      &nbsp;

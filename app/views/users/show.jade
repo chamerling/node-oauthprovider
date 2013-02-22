@@ -1,5 +1,15 @@
 extends ../layouts/default
 
 block main
-  h1= user.name
 
+  .media
+    a.pull-left(href="#")
+      img.media-object.img-polaroid(data-src="holder.js/100x100/social")
+    .media-body
+      h4.media-heading=user.name
+      ul
+        li= user.username
+        li
+          a(href="mailto:"+user.email, title="Email")=user.email
+          
+          

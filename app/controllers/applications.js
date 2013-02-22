@@ -6,7 +6,9 @@
 
 
 var mongoose = require('mongoose')
-  , Application = mongoose.model('Application');
+  , Application = mongoose.model('Application')
+  , AccessToken = mongoose.model('AccessToken')
+  ;
   
 /**
  * New application. Just put it in the response...
@@ -57,7 +59,14 @@ exports.users = function(req, res) {
 
 // Show an application
 exports.show = function(req, res) {
-  res.render('applications/show', {
-    application: req.application
-  })
+  // TODO : Let's do it synchronously : Count the application users and then render the page...  
+  AccessToken.where('clientID', req.application._id).count(function(err, count) {
+    if (err) {
+      // TODO...
+    }
+    res.render('applications/show', {
+      application: req.application,
+      count: count
+    })
+  });
 }

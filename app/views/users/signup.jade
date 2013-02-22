@@ -1,6 +1,9 @@
 extends auth
 
 block auth
+
+  h3 Sign up
+
   form.signup.form-horizontal(action="/users", method="post")
     .control-group
       label.control-label(for='name') Full name

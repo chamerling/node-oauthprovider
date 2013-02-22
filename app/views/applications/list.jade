@@ -1,9 +1,22 @@
 extends ../layouts/default
 
 block main
-  h1 Applications
+  h3 Applications
+   small &nbsp;Created by the current user
 
-block content
   each application in applications
-    .article
-      a.title(href='/applications/'+application._id, title=application.name) #{application.name}
+      .media
+        a.pull-left(href="#")
+          img.media-object.img-polaroid(data-src="holder.js/100x100/social")
+        .media-body
+          h4.media-heading
+            a(href='/applications/'+application._id, title=application.name) #{application.name}
+          ul
+            li Created at #{application.createdAt}
+        
+            li Client ID #{application.clientID}
+        
+            li Client Secret #{application.clientSecret}
+        
+            li
+              a(href="#", )...

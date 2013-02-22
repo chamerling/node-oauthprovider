@@ -1,6 +1,9 @@
 extends auth
 
 block auth
+
+  h3 Login
+
   form.login.form-horizontal(action="/login", method="post")
     p.error= message
     .control-group
